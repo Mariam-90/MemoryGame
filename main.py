@@ -1,58 +1,56 @@
-from SystemForLogin import System
+import pyrebase
+firebaseConfig = {
+    'apiKey': "AIzaSyCBKOCoHC9E_NkJVwFAqquQT-u08wki5D0",
+    'authDomain': "memorygame-dcf08.firebaseapp.com",
+    'databaseURL':'https://memorygame-dcf08-default-rtdb.firebaseio.com/',
+    'projectId': "memorygame-dcf08",
+    'storageBucket': "memorygame-dcf08.appspot.com",
+    'messagingSenderId': "1038386322318",
+    'appId': "1:1038386322318:web:9ee61b9c9c773606e322df",
+    ' measurementId': "G-QX06D6EKEW"
+}
+firebase = pyrebase.initialize_app(firebaseConfig)
 
-def Choose_number():
-    print("Choose  number to :\n"
-          "1. Login to your account\n"
-          "2. Register account\n")
+#db = firebase.database()
+#storage = firebase.auth()
+auth = firebase.auth()
+#print("Memory Game")
+#login
+def login():
+    email = input("Enter your email")
+    passward = input("Enter your password")
+    try:
+      auth.sign_in_with_email_and_password(email, passward)
+      print("Successfully signed in!")
+    except:
+      print("Invalid user or password. Try again!")
 
-if __name__ == '__main__':
-    sys = System()
-    while(True):
-        Choose_number()
-        num = input("Enter number: ")
-        print("\n")
-        if int(num) == 1:
-            username = input("Enter username")
-            password = input("Enter password")
-            sys.login(username, password)
-            #Choose_number()
+#signup
+def signin():
+    email = input("Enter your email")
+    password = input("Enter your password")
+    confirmpass = input("Confirm password")
+    if password == confirmpass :
+        try:
+            auth.create_user_with_email_and_password(email,password)
+            print("Successfully")
+        except:
+            print("Email already exists")
 
-        elif int(num) == 2:
-            username = input("Enter username")
-            password = input("Enter password")
-            sys.new_accunt(username, password)
-            username = input("Enter username")
-            password = input("Enter password")
-            sys.login(username,password)
-            Choose_number()
+def print_table():
+    print("1. login\n"
+          "2.signin\n"
+          "3.exit\n\n")
+
+while(True):
+    print_table()
+    op = input("Enter your number")
+    print("\n")
+    if int(op) == 1:
+        login()
+    elif int(op) == 2:
+        signin()
+    else:
+        break
 
 
-
-"""
-#print for the client as a message to welcoe to hin in our website
-print ("welcome in login page ")
-
-#varibles:
-#client / custmoers
-
-#username
-username=input("Enter your username:")
-#password
-password=input("Enter your password :")
-#repeat password
-repeat_password=input("Enter your password again:")
-#phone
-phone_number=input("Enter your phone number :")
-#birthday
-birth_day=input("Enter your birthday :")
-
-#if & else:
-if password==repeat_password:
-    print("welcome sure!")
-    print("your username is :"+username)
-    print("your password is created")
-    print("your phone is save")
-    print("your birthday is save")
-else:
-    print("Error, your password didn't have the same values, please return again")
-"""
