@@ -1,0 +1,80 @@
+@font-face {
+    font-family:"Creepy";
+    src: url("Assets/Fonts/Creepy.woff") format("woff"), url("Assets/Fonts/Creepy.woff2") format("woff2")
+}
+@font-face {
+    font-family:"Lunacy";
+    src: url("Assets/Fonts/Lunacy".woff") format("woff"), url("Assets/Fonts/Lunacy".woff2") format("woff2")
+    }
+
+* {
+    box-sizing: border-box;
+    }
+html {
+    min-height: 100vh;
+    }
+body {
+    margin: 0;
+    background: radial-gradient(deeppink,black);
+    }
+.page-title {
+    color: black;
+    font-family:creepy, serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 6em;
+    }
+.game-info-container {
+    grid-column: 1 /-1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info {
+    color-family: Lunacy, serif;
+    color: black;
+    font-size: 4em;
+    }
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+    margin:50px;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    background-color:deeppink;
+    height:175px;
+    width:125px;
+}
+.card-face {
+    position: absolute;
+     width:100px;
+     height: 100px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.cob-web {
+    position: absolute;
+     width:47px;
+     height: 47px;
+}
+.cob-web-top-left {
+    top: 0;
+    left: 0;
+}
+.cob-web-top-right{
+     top: 0;
+    left: 0;
+}
+.cob-web-bottom-right{
+     top: 0;
+    left: 0;
+}
+.cob-web-bottom-left {
+    transform: rotate(180deg)
+     bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <title> Welcome to the memory game </title>
+    <style>
+        .card{
+            margin: 3px;
+            width: 160px !important;
+            height: 180px !important;
+            position: relative;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .card:active{
+            transform: scale(0.97);
+            transition: transform 0.2s;
+        }
+        .card.flip{
+            transform: rotateY(180deg);
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+         .back-face{
+            width: 155px;
+            height: 172px;
+            padding: 3px;
+            backface-visibility: hidden;
+            position: absolute;
+         }
+
+        .front-face{
+            width: 155px;
+            height: 172px;
+           transform: rotateY(180deg);
+        }
+        @supports ( -moz-appearance: none){
+            .front-face, .back-face{
+            width: 155px;
+            height: 172px;
+            padding: 3px;
+            backface-visibility: hidden;
+            position: absolute;
+            .front-face{
+            transform: rotateY(180deg);
+            }
+
+         }
+
+
+    </style>
+
+</head>
+<body>
+<h1 class="page-title">Memory Game</h1>
+<div class="game-container">
+    <div class="game-info-container">
+        <div class="dame-info">Time <span id="time-remaining">100</span></div>
+        <div class="dame-info">Flips <span id="flips">0</span></div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-center">
+        <div class="card" data-framework="letterA">
+            <img class="front-face" src="/static/Images/letterA.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterA">
+            <img class="front-face" src="/static/Images/letterA.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterB">
+            <img class="front-face" src="/static/Images/letterB.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterB">
+            <img class="front-face" src="/static/Images/letterB.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterC">
+            <img class="front-face" src="/static/Images/letterC.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterC">
+            <img class="front-face" src="/static/Images/letterC.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterE">
+            <img class="front-face" src="/static/Images/letterE.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+        <div class="card" data-framework="letterE">
+            <img class="front-face" src="/static/Images/letterE.jpg"/>
+            <img class="back-face" src="/static/Images/f.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/categories">
+            <button class="btn btn-primary">Back!</button>
+        </a>
+    </div>
+</div>
+
+<script src="{{ url_for('static',filename='game.js') }}" defer></script>
+</body>
+</html>

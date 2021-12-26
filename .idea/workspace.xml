@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fa8b8a9-40c3-46d6-bd33-c4febb8d81a1" name="Changes" comment="">
+    <list default="true" id="0fa8b8a9-40c3-46d6-bd33-c4febb8d81a1" name="Changes" comment="maryam">
       <change beforePath="$PROJECT_DIR$/MemoryGame_G9/.idea/MemoryGame_G9.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame_G9/.idea/MemoryGame_G9.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryGame_G9/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame_G9/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemoryGame_G9/templates/signup.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryGame_G9/templates/signup.HTML" afterDir="false" />
@@ -34,5 +34,17 @@
       <updated>1639386166681</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
