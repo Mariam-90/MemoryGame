@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import database
+from database import saveGame
 
 app = Flask(__name__)
 
@@ -15,9 +16,20 @@ def get_login(user_mode):
     return render_template("login.html")
 
 
+@app.route("/get_login2/<user_mode>")
+def get_login2(user_mode):
+    print("user_mode = " + user_mode)
+    return render_template("login2.html")
+
+
 @app.route("/get_signup")
 def get_signup():
     return render_template("signup.HTML")
+
+
+@app.route("/get_signup2")
+def get_signup2():
+    return render_template("signup2.html")
 
 
 @app.route("/get_index1")
@@ -65,6 +77,20 @@ def get_letters3():
     return render_template("letters3.html")
 
 
+@app.route("/get_stars")
+def get_stars():
+    return render_template("stars.html")
+
+
+@app.route("/login2", methods=["POST"])
+def login2():
+    email = request.form["email"]
+    password = request.form["password"]
+    if database.login2(email, password):
+        return supervisor1()  # "Successfully signed in!"
+    return "Invalid user or password. Try again!"
+
+
 @app.route("/login", methods=["POST"])
 def login():
     email = request.form["email"]
@@ -84,11 +110,25 @@ def signup():
     return "Invalid user or password. Try again!"
 
 
+@app.route("/signup2", methods=["POST"])
+def signup2():
+    email = request.form["email"]
+    password = request.form["password"]
+    confirmPass = request.form["confirmPass"]
+    if database.signup2(email, password, confirmPass):
+        return supervisor1()  # "Successfully signed in!"
+    return "Invalid user or password. Try again!"
+
+
 @app.route("/selectUser", methods=["POST"])
 def selectUser():
     selected = request.form['options']
 
-    return redirect(url_for('get_login', user_mode=selected))
+    if selected == 'Player':
+        return redirect(url_for('get_login', user_mode=selected))
+
+    if selected == 'Supervisor':
+        return redirect(url_for('get_login2', user_mode=selected))
 
 
 @app.route("/categories")
@@ -96,41 +136,50 @@ def category():
     return render_template("chooseCategory.html")
 
 
-@app.route("/supervisor")
+@app.route("/save", methods=["POST"])
+def save():
+    data = request.get_json()
+    saveGame(data["difficulty"], data["category"], data["matches"])
+    return render_template("save")
+
+
+@app.route("/supervisor1")
+def supervisor1():
+    return render_template("supervisor1.html")
+
+
+@app.route("/supervisor22")
 def supervisor():
-    return render_template("supervisor.html")
+    return render_template("supervisor22.html")
 
 
 @app.route("/choose", methods=["POST"])
 def choose():
     selectedLevel = request.form['level']
     selectedCategory = request.form['category']
-    if selectedLevel == 'Easy':
-        if selectedCategory == 'Pictures':
+    if selectedCategory == 'Pictures':
+        if selectedLevel == 'Easy':
             return redirect(url_for('get_index1'))
-    if selectedLevel == 'Medium':
-        if selectedCategory == 'Pictures':
+        elif selectedLevel == 'Medium':
             return redirect(url_for('get_index2'))
-    if selectedLevel == 'Hard':
-        if selectedCategory == 'Pictures':
+        else:
             return redirect(url_for('get_index3'))
-    if selectedLevel == 'Easy':
-        if selectedCategory == 'Numbers':
+    # came bake her llooll
+
+    if selectedCategory == 'Numbers':
+        if selectedLevel == 'Easy':
             return redirect(url_for('get_numbersCard1'))
-    if selectedLevel == 'Medium':
-        if selectedCategory == 'Numbers':
+        elif selectedLevel == 'Medium':
             return redirect(url_for('get_numbersCard2'))
-    if selectedLevel == 'Hard':
-        if selectedCategory == 'Numbers':
+        else:
             return redirect(url_for('get_numbersCard3'))
-    if selectedLevel == 'Easy':
-        if selectedCategory == 'Letters':
+
+    if selectedCategory == 'Letters':
+        if selectedLevel == 'Easy':
             return redirect(url_for('get_letters1'))
-    if selectedLevel == 'Medium':
-        if selectedCategory == 'Letters':
+        elif selectedLevel == 'Medium':
             return redirect(url_for('get_letters2'))
-    if selectedLevel == 'Hard':
-        if selectedCategory == 'Letters':
+        else:
             return redirect(url_for('get_letters3'))
 
 

@@ -52,7 +52,8 @@
         cards.forEach(card => {
             let pos = Math.floor(Math.random() * 4);
             card.style.order = pos;
-        });
-    })();
 
-    cards.forEach(card=> card.addEventListener('click', flipCard));
+        });
+
+    })();
+        cards.forEach(card=> card.addEventListener('click', flipCard));

@@ -1,8 +1,9 @@
 import pyrebase
+
 firebaseConfig = {
     'apiKey': "AIzaSyCBKOCoHC9E_NkJVwFAqquQT-u08wki5D0",
     'authDomain': "memorygame-dcf08.firebaseapp.com",
-    'databaseURL':'https://memorygame-dcf08-default-rtdb.firebaseio.com/',
+    'databaseURL': 'https://memorygame-dcf08-default-rtdb.firebaseio.com/',
     'projectId': "memorygame-dcf08",
     'storageBucket': "memorygame-dcf08.appspot.com",
     'messagingSenderId': "1038386322318",
@@ -11,25 +12,39 @@ firebaseConfig = {
 }
 firebase = pyrebase.initialize_app(firebaseConfig)
 
-#db = firebase.database()
-#storage = firebase.auth()
+db = firebase.database()
+# storage = firebase.auth()
 auth = firebase.auth()
-#print("Memory Game")
-#login
-def login(email,password ):
+
+
+# print("Memory Game")
+# login
+def login2(email, password):
     flag = False
     try:
-      auth.sign_in_with_email_and_password(email, password)
-      flag = True
+        auth.sign_in_with_email_and_password(email, password)
+        flag = True
     except:
         pass
     return flag
-#signup
-def signup(email,password,confirmpass):
+
+
+def login(email, password):
     flag = False
-    if password == confirmpass :
+    try:
+        auth.sign_in_with_email_and_password(email, password)
+        flag = True
+    except:
+        pass
+    return flag
+
+
+# signup
+def signup(email, password, confirmpass):
+    flag = False
+    if password == confirmpass:
         try:
-            auth.create_user_with_email_and_password(email,password)
+            auth.create_user_with_email_and_password(email, password)
             flag = True
         except:
             pass
@@ -37,3 +52,25 @@ def signup(email,password,confirmpass):
         flag = False
     return flag
 
+
+def signup2(email, password, confirmpass):
+    flag = False
+    if password == confirmpass:
+        try:
+            auth.create_user_with_email_and_password(email, password)
+            flag = True
+        except:
+            pass
+    else:
+        flag = False
+    return flag
+
+
+def get_user_id():
+    return auth.current_user['localId']
+
+
+def saveGame(saveDifficulty, saveCategory, savePairs):
+    data = {"user_id": get_user_id(), "save_difficulty": saveDifficulty, "save_category": saveCategory,
+            "save_pairs": savePairs}
+    db.child("games").push(data)
