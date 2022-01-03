@@ -38,6 +38,14 @@ def login(email, password):
         pass
     return flag
 
+def login3(email, password):
+    flag = False
+    try:
+        auth.sign_in_with_email_and_password(email, password)
+        flag = True
+    except:
+        pass
+    return flag
 
 # signup
 def signup(email, password, confirmpass):
@@ -65,7 +73,17 @@ def signup2(email, password, confirmpass):
         flag = False
     return flag
 
-
+def signup3(email, password, confirmpass):
+    flag = False
+    if password == confirmpass:
+        try:
+            auth.create_user_with_email_and_password(email, password)
+            flag = True
+        except:
+            pass
+    else:
+        flag = False
+    return flag
 def get_user_id():
     return auth.current_user['localId']
 

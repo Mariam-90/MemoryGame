@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+{% extends 'base.html' %}
+
+{% block style %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <title> Welcome to the memory game </title>
+    <style>
+    .card{
+            margin: 3px;
+            width: 160px !important;
+            height: 180px !important;
+            position: relative;
+            transform: scale(1);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+    </style>
+
+</head>
+<body>
+<h1 class="page-title">Instruction</h1>
+
+    <div class="d-flex flex-wrap justify-content-center">
+        <p>
+            For the game there are rules:
+            Each card has two of the same
+            You can only open two balls together
+            If the two balls are the same, you win
+            And do the process until all the cards are finished
+            fun game
+
+        </p>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

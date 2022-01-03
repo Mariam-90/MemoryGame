@@ -1,11 +1,9 @@
 <!DOCTYPE HTML>
+{% extends "base.html" %}
+
+
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
-    <title> Welcome to the memory game </title>
-    <style>
+<style>
         .card{
             margin: 3px;
             width: 160px !important;
@@ -55,6 +53,12 @@
 
     </style>
 
+{% block content %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+    <title> Welcome to the memory game </title>
 </head>
 <body>
 <h1 class="page-title">Memory Game</h1>
@@ -124,6 +128,18 @@
     </div>
 </div>
 
+    <div class="save">
+            <button class="btn btn-primary" id="saveButton">Save!</button>
+    </div>
+</div>
+ <div class="menu">
+        <a href="/get_stars">
+            <button class="btn btn-primary">Lets Go Rating!</button>
+        </a>
+    </div>
+
 <script src="{{ url_for('static',filename='game.js') }}" defer></script>
+<script src="{{ url_for('static',filename='data.js') }}" defer></script>
 </body>
 </html>
+{% endblock  content %}

@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+{% extends 'base.html' %}
+
+{% block style %}
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -15,7 +18,9 @@
     </div>-->
 </div>
 
-
+ <div class="delete">
+            <button class="btn btn-primary" id="deleteAccount">Delete Account</button>
+    </div>
 <div class="menu">
     <a href="/categories">
         <button>
@@ -24,4 +29,5 @@
     </a>
 </div>
 </body>
+    {% endblock %}
 </html>

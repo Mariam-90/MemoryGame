@@ -1,4 +1,7 @@
 <!DOCTYPE HTML>
+{% extends 'base.html' %}
+
+{% block style %}
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -124,6 +127,18 @@
     </div>
 </div>
 
+    <div class="save">
+            <button class="btn btn-primary" id="saveButton">Save!</button>
+    </div>
+</div>
+ <div class="menu">
+        <a href="/get_stars">
+            <button class="btn btn-primary">Lets Go Rating!</button>
+        </a>
+    </div>
+
 <script src="{{ url_for('static',filename='game.js') }}" defer></script>
+<script src="{{ url_for('static',filename='data.js') }}" defer></script>
 </body>
 </html>
+{% endblock %}

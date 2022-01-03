@@ -56,6 +56,7 @@
     </style>
 
 </head>
+
 <body>
 <h1 class="page-title">Memory Game</h1>
 <div class="game-container">
@@ -109,8 +110,9 @@
             <button class="btn btn-primary">Back!</button>
         </a>
     </div>
+
      <div class="save">
-            <button class="btn btn-primary" onclick="saveData()">Save!</button>
+            <button class="btn btn-primary" id="saveButton" onclick="saveData()">Save!</button>
     </div>
 </div>
  <div class="menu">
@@ -119,7 +121,9 @@
         </a>
     </div>
 
+
 <script src="{{ url_for('static',filename='game.js') }}" defer></script>
 <script src="{{ url_for('static',filename='data.js') }}" defer></script>
 </body>
+
 </html>

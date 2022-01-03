@@ -1,5 +1,4 @@
 <html lang="en"><head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -11,6 +10,7 @@
 
 
 
+    <!-- Bootstrap core CSS -->
 <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 <meta name="theme-color" content="#7952b3">
@@ -21,6 +21,9 @@
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
+
+
+
         -moz-user-select: none;
         user-select: none;
       }
@@ -80,8 +83,9 @@ body {
   <body class="text-center gorgias-loaded" data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="">
 
 <main class="form-signin">
-  <form action="{{ url_for('login') }}" method="post">
+    <div class="card px-3 py-2" >
 
+  <form action="{{ url_for('login3') }}" method="post">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
@@ -100,9 +104,10 @@ body {
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
   </form>
-  <form action="{{ url_for('get_signup') }}" method="get">
+  <form action="{{ url_for('get_signup3') }}" method="get">
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
   </form>
+    </div>
 </main>
 
 
@@ -112,6 +117,5 @@ body {
 </body>
 
 
-    </div>
 </div>
 </html>

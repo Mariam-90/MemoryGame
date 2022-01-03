@@ -15,7 +15,7 @@ html {
     }
 body {
     margin: 0;
-    background: radial-gradient(deeppink,black);
+    background: radial-gradient(#DCDCDC,#FF1493);
     }
 .page-title {
     color: black;

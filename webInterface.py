@@ -22,6 +22,12 @@ def get_login2(user_mode):
     return render_template("login2.html")
 
 
+@app.route("/get_login3/<user_mode>")
+def get_login3(user_mode):
+    print("user_mode = " + user_mode)
+    return render_template("login3.html")
+
+
 @app.route("/get_signup")
 def get_signup():
     return render_template("signup.HTML")
@@ -30,6 +36,11 @@ def get_signup():
 @app.route("/get_signup2")
 def get_signup2():
     return render_template("signup2.html")
+
+
+@app.route("/get_signup3")
+def get_signup3():
+    return render_template("signup3.html")
 
 
 @app.route("/get_index1")
@@ -77,6 +88,11 @@ def get_letters3():
     return render_template("letters3.html")
 
 
+@app.route("/get_manager")
+def get_manager():
+    return render_template("manager.html")
+
+
 @app.route("/get_stars")
 def get_stars():
     return render_template("stars.html")
@@ -87,8 +103,17 @@ def login2():
     email = request.form["email"]
     password = request.form["password"]
     if database.login2(email, password):
-        return supervisor1()  # "Successfully signed in!"
-    return "Invalid user or password. Try again!"
+        return redirect(url_for("supervisor1"))
+        # "Successfully signed in!"
+
+
+@app.route("/login3", methods=["POST"])
+def login3():
+    email = request.form["email"]
+    password = request.form["password"]
+    if database.login3(email, password):
+        return redirect(url_for("get_manager"))
+        # "Successfully signed in!"
 
 
 @app.route("/login", methods=["POST"])
@@ -116,8 +141,18 @@ def signup2():
     password = request.form["password"]
     confirmPass = request.form["confirmPass"]
     if database.signup2(email, password, confirmPass):
-        return supervisor1()  # "Successfully signed in!"
-    return "Invalid user or password. Try again!"
+        return redirect(url_for("supervisor1"))  # "Successfully signed in!"
+    "Invalid user or password. Try again!"
+
+
+@app.route("/signup3", methods=["POST"])
+def signup3():
+    email = request.form["email"]
+    password = request.form["password"]
+    confirmPass = request.form["confirmPass"]
+    if database.signup3(email, password, confirmPass):
+        return redirect(url_for("get_manager"))  # "Successfully signed in!"
+    "Invalid user or password. Try again!"
 
 
 @app.route("/selectUser", methods=["POST"])
@@ -129,11 +164,18 @@ def selectUser():
 
     if selected == 'Supervisor':
         return redirect(url_for('get_login2', user_mode=selected))
+    if selected == 'Manager':
+        return redirect(url_for('get_login3', user_mode=selected))
 
 
 @app.route("/categories")
 def category():
-    return render_template("chooseCategory.html")
+    return render_template("chooseCategory.html", title="Home page")
+
+
+@app.route("/base")
+def base():
+    return render_template("base.html")
 
 
 @app.route("/save", methods=["POST"])
@@ -164,7 +206,6 @@ def choose():
             return redirect(url_for('get_index2'))
         else:
             return redirect(url_for('get_index3'))
-    # came bake her llooll
 
     if selectedCategory == 'Numbers':
         if selectedLevel == 'Easy':
