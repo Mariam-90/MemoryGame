@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
+{% block style %}
+{% endblock %}
+{% block content %}
 
 
 <html lang="en">
@@ -53,7 +57,6 @@
 
     </style>
 
-{% block content %}
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -142,4 +145,4 @@
 <script src="{{ url_for('static',filename='data.js') }}" defer></script>
 </body>
 </html>
-{% endblock  content %}
+{% endblock %}

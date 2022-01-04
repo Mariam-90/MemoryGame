@@ -145,6 +145,11 @@ def signup2():
     "Invalid user or password. Try again!"
 
 
+@app.route('/about_us')
+def about1():
+    return render_template('about_us.html', title='About',
+                           content='This is the About page')
+
 @app.route("/signup3", methods=["POST"])
 def signup3():
     email = request.form["email"]
@@ -176,6 +181,12 @@ def category():
 @app.route("/base")
 def base():
     return render_template("base.html")
+
+
+
+@app.route("/Instruction")
+def Instruction():
+    return render_template("Instruction.html")
 
 
 @app.route("/save", methods=["POST"])
