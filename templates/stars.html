@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
-{% block style %}
+    <style>
+h1 {
+  color:Tomato;
+  text-align:center;
+}
+</style>
+{% block content %}
 <html lang="en">
 <i class="fas fa-star"></i>
 <head>
@@ -10,12 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
     <link  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <style>
-h1 {
-  color:Tomato;
-  text-align:center;
-}
-</style>
 </head>
 <body>
 <h1 > Please rate the game </h1>
