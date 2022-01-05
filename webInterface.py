@@ -78,6 +78,7 @@ def get_letters1():
     return render_template("letters1.html")
 
 
+
 @app.route("/get_letters2")
 def get_letters2():
     return render_template("letters2.html")
@@ -103,7 +104,7 @@ def login2():
     email = request.form["email"]
     password = request.form["password"]
     if database.login2(email, password):
-        return redirect(url_for("supervisor1"))
+        return render_template("SupervisorPage.html")
         # "Successfully signed in!"
 
 
@@ -141,7 +142,7 @@ def signup2():
     password = request.form["password"]
     confirmPass = request.form["confirmPass"]
     if database.signup2(email, password, confirmPass):
-        return redirect(url_for("supervisor1"))  # "Successfully signed in!"
+        return render_template("SupervisorPage.html")  # "Successfully signed in!"
     "Invalid user or password. Try again!"
 
 
@@ -177,6 +178,10 @@ def selectUser():
 def category():
     return render_template("chooseCategory.html", title="Home page")
 
+@app.route("/ContactUs")
+def ContactUs():
+    return render_template("ContactUs.html", title="Home page")
+
 
 @app.route("/base")
 def base():
@@ -204,6 +209,9 @@ def supervisor1():
 @app.route("/supervisor22")
 def supervisor():
     return render_template("supervisor22.html")
+
+
+
 
 
 @app.route("/choose", methods=["POST"])
