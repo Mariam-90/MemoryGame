@@ -78,7 +78,6 @@ def get_letters1():
     return render_template("letters1.html")
 
 
-
 @app.route("/get_letters2")
 def get_letters2():
     return render_template("letters2.html")
@@ -89,9 +88,9 @@ def get_letters3():
     return render_template("letters3.html")
 
 
-@app.route("/get_manager")
+@app.route("/get_ManegerPage")
 def get_manager():
-    return render_template("manager.html")
+    return render_template("ManegerPage.html")
 
 
 @app.route("/get_stars")
@@ -151,6 +150,7 @@ def about1():
     return render_template('about_us.html', title='About',
                            content='This is the About page')
 
+
 @app.route("/signup3", methods=["POST"])
 def signup3():
     email = request.form["email"]
@@ -159,9 +159,6 @@ def signup3():
     if database.signup3(email, password, confirmPass):
         return render_template("ManegerPage.html")  # "Successfully signed in!"
     "Invalid user or password. Try again!"
-
-
-
 
 
 @app.route("/selectUser", methods=["POST"])
@@ -181,6 +178,7 @@ def selectUser():
 def category():
     return render_template("chooseCategory.html", title="Home page")
 
+
 @app.route("/ContactUs")
 def ContactUs():
     return render_template("ContactUs.html", title="Home page")
@@ -189,7 +187,6 @@ def ContactUs():
 @app.route("/base")
 def base():
     return render_template("base.html")
-
 
 
 @app.route("/Instruction")
@@ -212,9 +209,6 @@ def supervisor1():
 @app.route("/supervisor22")
 def supervisor():
     return render_template("supervisor22.html")
-
-
-
 
 
 @app.route("/choose", methods=["POST"])

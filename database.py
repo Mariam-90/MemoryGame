@@ -38,6 +38,7 @@ def login(email, password):
         pass
     return flag
 
+
 def login3(email, password):
     flag = False
     try:
@@ -46,6 +47,7 @@ def login3(email, password):
     except:
         pass
     return flag
+
 
 # signup
 def signup(email, password, confirmpass):
@@ -73,6 +75,7 @@ def signup2(email, password, confirmpass):
         flag = False
     return flag
 
+
 def signup3(email, password, confirmpass):
     flag = False
     if password == confirmpass:
@@ -84,6 +87,8 @@ def signup3(email, password, confirmpass):
     else:
         flag = False
     return flag
+
+
 def get_user_id():
     return auth.current_user['localId']
 

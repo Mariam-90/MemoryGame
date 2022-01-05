@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fa8b8a9-40c3-46d6-bd33-c4febb8d81a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/about_us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/system1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Instruction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ManegerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ManegerPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/SupervisorPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/SupervisorPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/letters1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/letters1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/letters2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/letters2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/letters3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/letters3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/numbersCard1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/numbersCard1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/numbersCard2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/numbersCard2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/numbersCard3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/numbersCard3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/signup3.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/stars.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/stars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/supervisor1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/supervisor1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/supervisor22.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/supervisor22.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/webInterface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +48,7 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.webInterface">
     <configuration name="webInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MemoryGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,9 +70,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in database_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="MemoryGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/database_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="MemoryGame" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.webInterface" />
+        <item itemvalue="Python tests.Python tests in database_test.py" />
+        <item itemvalue="Python tests.Python tests in test.py" />
       </list>
     </recent_temporary>
   </component>
