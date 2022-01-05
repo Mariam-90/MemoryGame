@@ -113,7 +113,7 @@ def login3():
     email = request.form["email"]
     password = request.form["password"]
     if database.login3(email, password):
-        return redirect(url_for("get_manager"))
+        return render_template("ManegerPage.html")
         # "Successfully signed in!"
 
 
@@ -157,8 +157,10 @@ def signup3():
     password = request.form["password"]
     confirmPass = request.form["confirmPass"]
     if database.signup3(email, password, confirmPass):
-        return redirect(url_for("get_manager"))  # "Successfully signed in!"
+        return render_template("ManegerPage.html")  # "Successfully signed in!"
     "Invalid user or password. Try again!"
+
+
 
 
 @app.route("/selectUser", methods=["POST"])
