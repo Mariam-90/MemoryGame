@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa8b8a9-40c3-46d6-bd33-c4febb8d81a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Instruction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ManegerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ManegerPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/SupervisorPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/SupervisorPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/webInterface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +50,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3" />
+      <option name="SDK_HOME" value="C:\Users\tmadr\OneDrive\שולחן העבודה\MemoryGame\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -98,6 +92,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.webInterface" />
+      <item itemvalue="Python tests.Python tests in database_test.py" />
+      <item itemvalue="Python tests.Python tests in test.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.webInterface" />
@@ -122,12 +121,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
