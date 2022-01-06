@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fa8b8a9-40c3-46d6-bd33-c4febb8d81a1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/database_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Instruction.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Instruction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ManegerPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ManegerPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/SupervisorPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/SupervisorPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webInterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/webInterface.py" afterDir="false" />
->>>>>>> b0e9bb4a93aa311e1ec96453c3fbf488bece764a
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
       <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for database_test.databaseTest.test_database_login2">
+  <component name="RunManager" selected="Python.webInterface">
     <configuration name="webInterface" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MemoryGame" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -57,11 +60,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-<<<<<<< HEAD
       <option name="SDK_HOME" value="C:\Users\wasee\AppData\Local\Microsoft\WindowsApps\python3.9.exe" />
-=======
-      <option name="SDK_HOME" value="C:\Users\tmadr\OneDrive\שולחן העבודה\MemoryGame\venv\Scripts\python.exe" />
->>>>>>> 26b4782ec1d047bb5196f2e75d5892d75c757443
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -73,34 +72,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for database_test.databaseTest" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="MemoryGame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;database_test.databaseTest&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for database_test.databaseTest.test_database_login2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="MemoryGame" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;database_test.databaseTest.test_database_login2&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests in database_test.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -138,10 +109,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for database_test.databaseTest.test_database_login2" />
         <item itemvalue="Python.webInterface" />
         <item itemvalue="Python tests.Python tests in database_test.py" />
-        <item itemvalue="Python tests.Python tests for database_test.databaseTest" />
         <item itemvalue="Python tests.Python tests in test.py" />
       </list>
     </recent_temporary>
@@ -162,19 +131,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
