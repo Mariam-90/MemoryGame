@@ -3,7 +3,7 @@ import database
 
 email = []
 password = []
-confirmpass=[]
+confirmpass = []
 
 
 class databaseTest(unittest.TestCase):
@@ -24,8 +24,22 @@ class databaseTest(unittest.TestCase):
         self.assertTrue(r)
 
     def test_database_signup(self):
-       s = database.signup(email='', password='123456ff', confirmpass='123456ff')
-       self.assertEqual(s)
+        c = '123456ff'
+        d = '123456ff'
+        a = database.signup(email='maryam09rr@gmail.com', password=c,confirmpass=d)
+        self.assertEqual(a, d == c)
+
+    def test_database_signup2(self):
+        c = '123456ff'
+        d = '123456ff'
+        a = database.signup2(email='maryam09mm@gmail.com', password=c, confirmpass=d)
+        self.assertEqual(a, d == c)
+
+    def test_database_signup3(self):
+        c = '123456ff'
+        d = '123456ff'
+        a = database.signup3(email='maryammmm@gmail.com', password=c, confirmpass=d)
+        self.assertEqual(a, d == c)
 
 
 if __name__ == '__main__':

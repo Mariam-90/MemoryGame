@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import database
-from database import saveGame
+
+import users
 
 app = Flask(__name__)
 
@@ -103,6 +104,11 @@ def get_stars():
     return render_template("stars.html")
 
 
+@app.route("/deleteUser", methods=["POST"])
+def get_deleteUser():
+    return users.deletUser(database.get_user_id())
+
+
 @app.route("/login2", methods=["POST"])
 def login2():
     email = request.form["email"]
@@ -126,7 +132,9 @@ def login():
     email = request.form["email"]
     password = request.form["password"]
     if database.login(email, password):
+        print(database.get_user_id())
         return category()  # "Successfully signed in!"
+
     return "Invalid user or password. Try again!"
 
 
@@ -202,8 +210,9 @@ def Instruction():
 @app.route("/save", methods=["POST"])
 def save():
     data = request.get_json()
-    saveGame(data["difficulty"], data["category"], data["matches"])
-    return render_template("save")
+    users.saveGame(data["difficulty"], data["category"], data["matches"])
+    response = jsonify(sucess=True)
+    return response
 
 
 @app.route("/supervisor1")

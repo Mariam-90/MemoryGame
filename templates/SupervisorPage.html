@@ -17,7 +17,8 @@
         }
       }
 
-    </style>
+
+</style>
 
 
 <!-- Custom styles for this template -->
@@ -62,7 +63,8 @@ body {
   border-top-right-radius: 0;
 }
 
-    </style>
+
+</style>
 {% endblock %}
 {% block content %}
 <head xmlns="http://www.w3.org/1999/html">
@@ -79,7 +81,7 @@ body {
     <!-- Bootstrap core CSS -->
 
     <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <meta name="theme-color" content="#7952b3">
 
@@ -87,62 +89,58 @@ body {
 <body class="text-center gorgias-loaded" data-new-gr-c-s-check-loaded="14.1040.0" data-gr-ext-installed="">
 
 
-
-        <h1 class="h3 mb-3 fw-normal">Choose What Do You Want To Do</h1>
-         <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/categories">
-                <button class="btn btn-primary">Play!</button>
-            </a>
-        </div>
-         </div>
-
-
-          <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/get_signup">
-                <button class="btn btn-primary">Add Users</button>
-            </a>
-        </div>
-          </div>
+<h1 class="h3 mb-3 fw-normal">Choose What Do You Want To Do</h1>
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/categories">
+            <button class="btn btn-primary">Play!</button>
+        </a>
+    </div>
+</div>
 
 
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/get_signup">
+            <button class="btn btn-primary">Add Users</button>
+        </a>
+    </div>
+</div>
 
 
-         <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/get_login/<user_mode>">
-                <button class="btn btn-primary">sign in to the player user!</button>
-            </a>
-        </div>
-         </div>
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/get_login/<user_mode>">
+            <button class="btn btn-primary">sign in to the player user!</button>
+        </a>
+    </div>
+</div>
 
-        <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/categories">
-                <button class="btn btn-primary">Delete my user!</button>
-            </a>
-        </div>
-        </div>
+<div class="d-flex flex-row justify-content-center">
+    <div class="delete">
+        <button class="btn btn-primary" id="deleteButton">Delete  My Account</button>
+    </div>
+</div>
 
-         <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/categories">
-                <button class="btn btn-primary">Delete users!</button>
-            </a>
-        </div>
-         </div>
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/categories">
+            <button class="btn btn-primary">Delete users!</button>
+        </a>
+    </div>
+</div>
 
-         <div class="d-flex flex-row justify-content-center">
-        <div class="menu">
-            <a href="/ContactUs">
-                <button class="btn btn-primary">Contact Us!</button>
-            </a>
-        </div>
-         </div>
-    </form>
+<div class="d-flex flex-row justify-content-center">
+    <div class="menu">
+        <a href="/ContactUs">
+            <button class="btn btn-primary">Contact Us!</button>
+        </a>
+    </div>
+</div>
+</form>
 </main>
 
+<script src="{{ url_for('static',filename='delete.js') }}" defer></script>
 
 </body>
 </html>

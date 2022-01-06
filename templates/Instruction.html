@@ -1,30 +1,54 @@
-<!DOCTYPE HTML>
-{% extends 'base.html' %}
-
-{% block style %}
-{% endblock %}
-{% block content %}
+<!DOCTYPE html>
 <html lang="en">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+.container {
+  position: relative;
+  max-width: 600px;
+  height: 500px;
+  padding: 50px;
+  color: #555;
+  text-align: center;
+}
+.langWrap{
+  background: #333;
+}
+a{
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 15px;
+  font-weight: bold;
+  background: #555656;
+  font-size: 18px;
+}
+a.active{
+  background: #f21313;
+}
+.content{
+  margin-top: 20px;
+  font-size: 20px;
+}
+</style>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
-    <title> Welcome to the memory game </title>
-    <style>
-    .card{
-            margin: 3px;
-            width: 160px !important;
-            height: 180px !important;
-            position: relative;
-            transform: scale(1);
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
-    </style>
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>language switch using JavaScript</title>
 </head>
-
 <body>
+<a href="/categories"><img src="/static/Images/home.jpg" alt="HTML tutorial" style="width:42px;height:42px;"></a>
 	<div class="container">
 		<div class="langWrap">
 			<a href="#" language='english' class="active">English</a>
@@ -76,6 +100,7 @@
 			  }
 			}
 	</script>
+
+</head>
 </body>
 </html>
-{% endblock %}

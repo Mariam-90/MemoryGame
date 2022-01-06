@@ -93,7 +93,4 @@ def get_user_id():
     return auth.current_user['localId']
 
 
-def saveGame(saveDifficulty, saveCategory, savePairs):
-    data = {"user_id": get_user_id(), "save_difficulty": saveDifficulty, "save_category": saveCategory,
-            "save_pairs": savePairs}
-    db.child("games").push(data)
+
