@@ -20,6 +20,8 @@
 
 
 
+
+
 </style>
 
 
@@ -68,6 +70,8 @@ body {
 
 
 
+
+
 </style>
 {% endblock %}
 {% block content %}
@@ -102,12 +106,6 @@ body {
     </div>
 </div>
 
-<div class="d-flex flex-row justify-content-center">
-    <div class="delete">
-        <button class="btn btn-primary" id="deleteButton">Delete My Account</button>
-    </div>
-</div>
-
 
 <div class="d-flex flex-row justify-content-center">
     <div class="menu">
@@ -133,6 +131,9 @@ body {
         </a>
     </div>
 </div>
+<div class="delete">
+    <button class="btn btn-primary" id="deleteButton">Delete Account</button>
+</div>
 
 <div class="d-flex flex-row justify-content-center">
     <div class="menu">
@@ -153,7 +154,6 @@ body {
 
 </main>
 
-<script src="{{ url_for('static',filename='delete.js') }}" defer></script>
 
 </body>
 </html>

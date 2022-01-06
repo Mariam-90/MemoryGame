@@ -132,7 +132,6 @@ def login():
     email = request.form["email"]
     password = request.form["password"]
     if database.login(email, password):
-        print(database.get_user_id())
         return category()  # "Successfully signed in!"
 
     return "Invalid user or password. Try again!"
