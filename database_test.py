@@ -22,6 +22,11 @@ class databaseTest(unittest.TestCase):
         print(" login3", r)
         self.assertTrue(r)
 
+    def test_database_signup(self):
+            s = database.signup(email='maryamm@gmail.com', password='123456ff', confirmpass=' 123456ff')
+            self.assertTrue(s)
+            print("signup", s)
+
 
 if __name__ == '__main__':
     unittest.main()
