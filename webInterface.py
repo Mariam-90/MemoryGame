@@ -83,11 +83,6 @@ def get_letters2():
     return render_template("letters2.html")
 
 
-@app.route("/get_SupervisorPage")
-def get_SupervisorPage():
-    return render_template("SupervisorPage.html")
-
-
 @app.route("/get_letters3")
 def get_letters3():
     return render_template("letters3.html")
