@@ -23,25 +23,59 @@
     </style>
 
 </head>
+
 <body>
-<h1 class="page-title">Instruction</h1>
+	<div class="container">
+		<div class="langWrap">
+			<a href="#" language='english' class="active">English</a>
+			<a href="#" language='arabic'>العربية</a>
+			<a href="#" language='hebrown'>עברית</a>
+		</div>
 
-    <div class="d-flex flex-wrap justify-content-center">
-        <p>
-            For the game there are rules:
-           <br>
-            Each card has two of the same
-            <br>
-            You can only open two balls together
-            <br>
-            If the two balls are the same, you win
-            <br>
-            And do the process until all the cards are finished
-            fun game
+		<div class="content">
+			<h2 class="title">Instruction</h2>
+			<p class="description">For the game there are rules:Each card has two of the same You can only open two balls together If the two balls are the same, you win And do the process until all the cards are finished fun game.</p>
+		</div>
+	</div>
+	<script>
+		const langEl = document.querySelector('.langWrap');
+		const link = document.querySelectorAll('a');
+		const titleEl = document.querySelector('.title');
+		const descrEl = document.querySelector('.description');
 
-        </p>
-        </div>
-    </div>
+		link.forEach(el => {
+			el.addEventListener('click', () => {
+				langEl.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+
+				const attr = el.getAttribute('language');
+
+				titleEl.textContent = data[attr].title;
+				descrEl.textContent = data[attr].description;
+			});
+		});
+
+		var data = {
+			  "english":
+			  {
+			    "title": "Instruction",
+			    "description":
+				    "For the game there are rules:Each card has two of the same You can only open two balls together If the two balls are the same, you win And do the process until all the cards are finished fun game."
+			  },
+			  "arabic":
+			  {
+			    "title": "تعليمات",
+			    "description":
+				    "بالنسبة للعبة ، هناك قواعد: كل بطاقة لها اثنتان من نفس النوع ، يمكنك فقط فتح كرتين معًا إذا كانت الكرتان متماثلتان ، فستفوز وتقوم بالعملية حتى تنتهي من جميع البطاقات  لعبة ممتعة.."
+			  },
+			  "hebrown":
+			  {
+			    "title": "הוראה",
+			    "description":
+				    "למשחק יש חוקים: בכל קלף יש שניים זהים ניתן לפתוח רק שני כדורים יחד אם שני הכדורים זהים, אתה מנצח ועושה את התהליך עד שכל הקלפים יסתיימו משחק מהנה."
+			  }
+			}
+	</script>
 </body>
 </html>
 {% endblock %}
