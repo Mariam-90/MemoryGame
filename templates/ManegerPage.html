@@ -7,9 +7,7 @@
         html,
 body {
   height: 100%;
-}
 
-body {
   display: flex;
   align-items: center;
   padding-top: 40px;
@@ -43,11 +41,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
-
-    </style>
-<style>
-      .bd-placeholder-img {
+ .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -60,8 +54,29 @@ body {
           font-size: 3.5rem;
         }
       }
+      a:link, a:visited {
+
+         background-color: rgb(0, 81, 255);
+          color: white;
+          padding: 15px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+        }
+
+        a:hover, a:active {
+
+          background-color: #3688f4;
+        }
+        h1 {text-align: center;}
+        p {text-align: center;}
 
     </style>
+
+
+
+
+
 {% endblock %}
 {% block content %}
 <head xmlns="http://www.w3.org/1999/html">
@@ -70,7 +85,7 @@ body {
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>{{ varName }}</title>
+    <title>Maneger page</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
@@ -88,6 +103,8 @@ body {
 
 
         <h1 class="h3 mb-3 fw-normal">Choose What Do You Want To Do</h1>
+        <br>
+        <br>
          <div class="d-flex flex-row justify-content-center">
         <div class="menu">
             <a href="/categories">
@@ -95,7 +112,8 @@ body {
             </a>
         </div>
          </div>
-
+        <br>
+        <br>
         <div class="d-flex flex-row justify-content-center">
         <div class="menu">
             <a href="/get_stars">
@@ -103,6 +121,46 @@ body {
             </a>
         </div>
          </div>
+        <br>
+        <br>
+         <div class="d-flex flex-row justify-content-center">
+        <div class="menu">
+            <a href="https://console.firebase.google.com/u/0/project/memorygame-dcf08/authentication/users/" target="_blank">
+                <button class="btn btn-primary">Delet account</button>
+            </a>
+        </div>
+         </div>
+        <br>
+        <br>
+        <div class="d-flex flex-row justify-content-center">
+        <div class="menu">
+            <a href="https://console.firebase.google.com/u/0/project/memorygame-dcf08/authentication/users/" target="_blank">
+                <button class="btn btn-primary">Reset password</button>
+            </a>
+        </div>
+         </div>
+        <br>
+        <br>
+        <div class="d-flex flex-row justify-content-center">
+        <div class="menu">
+            <a href="https://console.firebase.google.com/u/0/project/memorygame-dcf08/authentication/users/" target="_blank">
+                <button class="btn btn-primary">Search a user</button>
+            </a>
+        </div>
+         </div>
+        <br>
+        <br>
+        <div class="d-flex flex-row justify-content-center">
+        <div class="menu">
+            <a href="mailto:someone@example.com">
+                <button class="btn btn-primary">Send email</button>
+            </a>
+        </div>
+         </div>
+
+
+
+
 
 
 
