@@ -3,6 +3,7 @@ import database
 
 email = []
 password = []
+confirmpass=[]
 
 
 class databaseTest(unittest.TestCase):
@@ -23,9 +24,8 @@ class databaseTest(unittest.TestCase):
         self.assertTrue(r)
 
     def test_database_signup(self):
-        s = database.signup(email='maryam90@gmail.com', password='123456ff', confirmpass='123456ff')
-        self.assert_(s, msg='True')
-        print("signup", s)
+       s = database.signup(email='', password='123456ff', confirmpass='123456ff')
+       self.assertEqual(s)
 
 
 if __name__ == '__main__':
